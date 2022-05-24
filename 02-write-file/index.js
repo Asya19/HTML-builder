@@ -23,3 +23,6 @@ process.on('exit', code => {
   else
     stderr.write(`Ошибка с кодом ${code}`);
 });
+process.on('SIGINT', () => {
+  process.exit();
+});
